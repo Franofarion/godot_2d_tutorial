@@ -1,10 +1,12 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://assets/tileset.png" type="Texture" id=1]
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/Actors/Enemy.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/background.png" type="Texture" id=4]
 [ext_resource path="res://src/Objects/Coin.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/Objects/Portal2D.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/Levels/Level02.tscn" type="PackedScene" id=7]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
@@ -62,34 +64,82 @@ tile_data = PoolIntArray( -262144, 0, 0, -196608, 0, 0, -131072, 0, 0, -65536, 0
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 130, 192 )
 
-[node name="Enemy" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1571, 562 )
+[node name="Ennemies" type="Node" parent="."]
 
-[node name="Enemy2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1339, 560 )
+[node name="Enemy" parent="Ennemies" instance=ExtResource( 3 )]
+position = Vector2( 2054, 947 )
 
-[node name="Enemy3" parent="." instance=ExtResource( 3 )]
-position = Vector2( 3378, 554 )
+[node name="Enemy2" parent="Ennemies" instance=ExtResource( 3 )]
+position = Vector2( 1492, 948 )
 
-[node name="Enemy4" parent="." instance=ExtResource( 3 )]
-position = Vector2( 3041, 593 )
+[node name="Enemy3" parent="Ennemies" instance=ExtResource( 3 )]
+position = Vector2( 3192, 940 )
 
-[node name="Coin" parent="." instance=ExtResource( 5 )]
+[node name="Enemy4" parent="Ennemies" instance=ExtResource( 3 )]
+position = Vector2( 2500, 940 )
+
+[node name="Coins" type="Node" parent="."]
+
+[node name="Coin" parent="Coins" instance=ExtResource( 5 )]
 position = Vector2( 769, 553 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Coin5" parent="." instance=ExtResource( 5 )]
+[node name="Coin6" parent="Coins" instance=ExtResource( 5 )]
 position = Vector2( 769, 553 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Coin2" parent="." instance=ExtResource( 5 )]
+[node name="Coin5" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 347, 227 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Coin7" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 518, 669 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Coin8" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 575, 605 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Coin9" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 649, 560 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Coin2" parent="Coins" instance=ExtResource( 5 )]
 position = Vector2( 986, 553 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Coin3" parent="." instance=ExtResource( 5 )]
+[node name="Coin10" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 1969, 858 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Coin11" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 2023, 806 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Coin12" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 2091, 772 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Coin13" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 2390, 671 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Coin14" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 2459, 598 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Coin15" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 2542, 535 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Coin3" parent="Coins" instance=ExtResource( 5 )]
 position = Vector2( 911, 553 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Coin4" parent="." instance=ExtResource( 5 )]
+[node name="Coin4" parent="Coins" instance=ExtResource( 5 )]
 position = Vector2( 840, 554 )
 scale = Vector2( 0.5, 0.5 )
+
+[node name="Portal2D" parent="." instance=ExtResource( 6 )]
+position = Vector2( 3434, 939 )
+next_scene = ExtResource( 7 )

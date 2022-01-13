@@ -20,7 +20,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Test"
+config/name="2D_tutorial_plateformer"
 config/icon="res://icon.png"
 
 [input]
