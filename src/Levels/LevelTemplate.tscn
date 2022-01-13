@@ -75,13 +75,21 @@ position = Vector2( 3378, 554 )
 position = Vector2( 3041, 593 )
 
 [node name="Coin" parent="." instance=ExtResource( 5 )]
+position = Vector2( 769, 553 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Coin5" parent="." instance=ExtResource( 5 )]
+position = Vector2( 769, 553 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Coin2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 986, 553 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Coin3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 911, 553 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Coin4" parent="." instance=ExtResource( 5 )]
+position = Vector2( 840, 554 )
 scale = Vector2( 0.5, 0.5 )
